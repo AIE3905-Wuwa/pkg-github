@@ -1,0 +1,15 @@
+schema_version: 1
+id: github
+version: 0.1
+compat: ">= 0.3"
+members: [github]
+connectors:
+  - name: gh
+    system: true
+    expect: ">= 2.0"
+depends: [framework]
+uninstall:
+  retains: [wiki/github/]
+  credentials: [~/.config/gh/, "%APPDATA%/GitHub CLI/"]
+  bridges: []
+  processes: []
